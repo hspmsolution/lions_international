@@ -1,0 +1,14 @@
+.container {
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-md-3 img{
+    width: 25%;
+}
