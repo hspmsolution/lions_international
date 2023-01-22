@@ -3,7 +3,7 @@ import logo2 from '../../../assets/img/logo2.png';
 
 function About() {
     return(
-        <section classNameName="about-small  container mt-0">
+        <div className="about  container mt-0">
             <div className="animate_dist">
                 <h1 className="animated">About District 3234-D2</h1>
             </div>
@@ -30,7 +30,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
