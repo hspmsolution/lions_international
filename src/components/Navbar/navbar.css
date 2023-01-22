@@ -8,13 +8,19 @@ a {
 }
 
 #header {
-    background: #084f9d !important;
+    background: #b1b1b16a !important;
     transition: all 0.5s;
     z-index: 997;
     padding: 5px 20px;
     position: sticky;
     box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
     border: none;
+    position: fixed;
+    border-radius: 15px;
+    width: 95%;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #header .logo img {
