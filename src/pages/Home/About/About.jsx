@@ -20,8 +20,8 @@ function About() {
                             and its administrative functioning and reporting.</p>
                         <div id="audio">
                             <h4>Listen To Our Theme Song</h4>
-                            <a onclick="playAudio()" type="button"><i className="icofont-play-alt-1"></i></a>
-                            <a onclick="pauseAudio()" type="button"><i className="icofont-pause"></i></a>
+                            <a href="/" onclick="playAudio()" type="button"><i className="icofont-play-alt-1"></i></a>
+                            <a href="/" onclick="pauseAudio()" type="button"><i className="icofont-pause"></i></a>
                             <audio id="myAudio">
                                 <source src="./img/anthem.mpeg" type="audio/ogg"/>
                             </audio>
