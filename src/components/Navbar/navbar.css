@@ -1,58 +1,89 @@
-a {
-    text-decoration: none !important;
+.dist-bg {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(54,52,53,1) 68%, rgba(54,52,53,1) 100%);
 }
 
-.container-flex {
-    display: flex!important;
-    align-items: center!important;
+.dist-li {
+  color:#f2e279; font-weight:800; font-size:4rem; padding-top:10px;margin-top:0 !important;
 }
 
-#header {
-    background: #b1b1b16a !important;
-    transition: all 0.5s;
-    z-index: 997;
-    padding: 5px 20px;
-    position: sticky;
-    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
-    border: none;
-    position: fixed;
-    border-radius: 15px;
-    width: 95%;
-    top: 15px;
-    left: 50%;
-    transform: translate(-50%);
+.dist-no {
+  color:#f2e279; margin-bottom:0 !important; padding-bottom:20px;
 }
 
-#header .logo img {
-    max-height: 75px;
-    padding-right: 15px;
-    transition: all 0.5s;
-}
-
-.nav-menu > ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-menu > ul > li {
-    position: relative;
-    white-space: nowrap;
-    padding: 10px 0 10px 15px;
-}
-
-.nav-menu a {
-    display: block;
-    position: relative;
-    color: #fff !important;
-    transition: 0.3s;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 0 3px;
-    font-family: "Open Sans", sans-serif;
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 5px 20px;
 }
 
 .mr-auto, .mx-auto {
-    margin-right: auto !important;
+  margin-right: auto !important;
+}
+
+.d-flex {
+  display: flex!important;
+}
+
+.align-items-center {
+  align-items: center!important;
+}
+
+.header .logo img {
+  max-height: 75px;
+  padding-right: 15px;
+  transition: all 0.5s;
+}
+
+img, svg {
+   vertical-align: middle;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.nav-menu {
+  gap: 10px;
+}
+
+.nav-menu > ul {
+  display: flex !important;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu > ul > li {
+  padding: 10px 0 10px 15px;
+  /* background-color: #845c08;
+  border-radius: 10px; */
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #fff !important;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 3px;
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+}
+/* 
+.menu ul {
+  
+} */
+
+.scrolled {
+  background: #084f9d !important;
+  position: fixed !important;
+  width: 98%;
+  border-radius: 15px;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  
 }

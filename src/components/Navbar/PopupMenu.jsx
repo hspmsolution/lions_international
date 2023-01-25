@@ -46,9 +46,11 @@ const PopupMenu = ({ name, menuItems }) => {
           fullWidth
          
           style={{
+            textDecoration: 'none',
+            alignItems: 'center !important',
             color: '#fff',
             textTransform: 'none',
-            padding: '0 3px',
+            padding: '0',
             fontWeight: 600,
             fontSize: 15,
             fontFamily: '"Open Sans", sans-serif'
