@@ -1,11 +1,11 @@
 .about {
-    margin: 2rem auto;
+    margin: 5rem auto;
     padding: 1rem;
+    background-color: #000;
+    border-radius: 3rem;
+    color: #fff;
 }
 
-.mt-0 {
-    margin-top: 0 !important;
-}
 
 .animate_dist {
     padding: 0 40px;
@@ -24,6 +24,13 @@ h1, h4 {
     line-height: 1.2;
 }
 
+.animated {
+    margin-bottom: 2rem;
+    border-bottom: 5px solid #084f9d;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+}
+
 .col-lg-12 {
     position: relative;
     width: 100%;
@@ -33,27 +40,31 @@ h1, h4 {
 }
 
 .row {
-    display: flex;
+    /* display: flex; */
 }
 
 .col-md-3 {
     width: 25%;
     padding: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 .col-md-3 img{
     width: 100%;
+    padding: auto;
 }
 
 .col-md-9 {
     width: 75%;
     padding-top: 40px !important;
-    padding: 0 10px;
 }
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+    padding: 0 4rem;
+    text-align: center;
 }
 
 #audio {
@@ -64,3 +75,4 @@ p {
 h4 {
     font-size: 1.5rem;
 }
+
