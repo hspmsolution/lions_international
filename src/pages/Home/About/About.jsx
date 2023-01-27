@@ -1,13 +1,15 @@
 import './about.css';
 import logo2 from '../../../assets/img/logo2.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function About() {
     return(
+        <div className="abt-ctn">
         <div className="about  container">
             
             <div className="col-lg-12">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 d-flex">
                         <img src={logo2} alt=""/>
                     </div>
                     <div className="col-md-9">
@@ -21,8 +23,9 @@ function About() {
                             and its administrative functioning and reporting.</p>
                         <div id="audio">
                             <h4>Listen To Our Theme Song</h4>
-                            <a onClick="playAudio()" type="button"><i className="icofont-play-alt-1"></i></a>
-                            <a onClick="pauseAudio()" type="button"><i className="icofont-pause"></i></a>
+                            <FontAwesomeIcon icon="fa-regular fa-circle-play" />
+                            {/* <a href='/' onClick="playAudio()" type="button"><i className="icofont-play-alt-1"></i></a> */}
+                            {/* <a href='/' onClick="pauseAudio()" type="button"><i className="icofont-pause"></i></a> */}
                             <audio id="myAudio">
                                 <source src="./img/anthem.mpeg" type="audio/ogg"/>
                             </audio>
@@ -31,6 +34,7 @@ function About() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

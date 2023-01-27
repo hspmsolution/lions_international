@@ -1,7 +1,14 @@
+.abt-ctn {
+    margin-top:0 !important;
+    /* background-color: #232a34; */
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,46,87,1) 98%);
+    padding: 5rem !important;
+}
+
 .about {
-    margin: 5rem auto;
     padding: 1rem;
-    background-color: #000;
+    background-color: rgba(222, 213, 213, 0.589);
     border-radius: 3rem;
     color: #fff;
 }
@@ -39,14 +46,14 @@ h1, h4 {
     padding-left: 15px;
 }
 
-.row {
-    /* display: flex; */
-}
+/* .row {
+    display: flex;
+} */
 
 .col-md-3 {
     width: 25%;
     padding: 0 10px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 

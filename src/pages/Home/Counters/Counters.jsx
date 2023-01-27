@@ -1,43 +1,71 @@
 import React from 'react';
-import joinusbanner from "../../../assets/img/joinus-banner.png";
 import CountUp from 'react-countup';
+import './counter.css'
+import { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-function Counter() {
-    
-    class FormCounter extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { count: 0 };
-    }
-    
-      incrementCount = () => {
-        this.setState(prevState => ({ count: prevState.count + 1 }));
-      }
-    }
-    onclick = () => {
-        // make API call and submit form
-        this.props.incrementCount()
-    }
-
-    <FormCounter incrementCount={this.incrementCount} />
-
-
+function EventCounter({ event }) {
     return (
-        <div className="counter" style={{backgroundImage: `url(${joinusbanner})`}}>
-            <h1>Counter </h1>
-            <div>
-                <CountUp start={this.state.count} end={this.state.count} duration={1}>
-                    {({ countUpRef }) => (
-                        <div>
-                        <span ref={countUpRef} />
-                        <p>Forms Submitted</p>
-                        </div>
-                    )}
-                </CountUp>
+        <div className='col-md-3 col-6 count-border'>
+            {/* <svg height="200" width="200"><circle class="circle" cx="100" cy="100" r="95" stroke="tranparent" stroke-width="10" fill-opacity="0" /></svg> */}
+            <div className="">
+                <div>
+                    <div>{event.icon}</div>
+                    <h3>{event.name}</h3>
+                    <CountUp start={event.start} end={event.end} duration={5}>
+                        {({ countUpRef }) => (
+                            <div>
+                                <span ref={countUpRef} />
+                            </div>
+                        )}
+                    </CountUp>
+                </div>
             </div>
         </div>
     );
 }
 
-export default Counter;
+
+
+const events = [
+    { name: "Activities", start: 100, end: 9590, icon:<FontAwesomeIcon icon="fa-solid fa-users" /> },
+    { name: "Amount Spent", start: 100000, end: 96783787 },
+    { name: "Clubs", start: 10, end: 128 },
+    { name: "People Served", start: 10000, end: 4210402 },
+]
+
+function Counters() {
+    const countersRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (countersRef.current && window.scrollY >= countersRef.current.offsetTop) {
+                // start the count
+                events.forEach(event => {
+                    event.start();
+                });
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
+    return (
+        <div className="counters">
+            <div className='container col-lg-12'>
+                <div ref={countersRef} className='row text-center'>
+                    {events.map(event => (  
+                        <EventCounter key={event.name} event={event} />
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Counters;
+
+
