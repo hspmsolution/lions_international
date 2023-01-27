@@ -1,7 +1,7 @@
 import About from './About/About.jsx';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import Slider from '../../components/Slider/Slider.jsx';
-import Counter from './Counters/Counters.jsx';
+import Counters from './Counters/Counters.jsx';
 
 function Home() {
     return (
@@ -9,7 +9,7 @@ function Home() {
         <Navbar />
         <Slider />
         <About />
-        {/* <Counter /> */}
+        <Counters />
       </div>
     );
 }

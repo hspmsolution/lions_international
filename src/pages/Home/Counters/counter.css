@@ -1,0 +1,73 @@
+.counters {
+  width: 100%;
+  padding: 3rem 0;
+  background: url(../../../assets/img/joinus-banner.png) no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  color: #fff;
+}
+
+.counters .col-lg-12 {
+border-radius: 50px;
+padding: 3rem;
+background: rgba(0, 0, 0, 0.495);
+}
+
+.counters:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #112E57;
+}
+
+.counters .col-md-3 {
+  /* padding: 3rem; */
+  margin: 1rem auto;
+  position: relative;
+  /* top: -50px; */
+  z-index: 5;
+}
+
+svg {
+  position: "relative";
+  transform: scale(1);
+}
+.count-border, .count-border h3 {
+  font-weight: 700;
+
+}
+.count-border {
+  width: 20%;
+  border-radius: 50%;
+  background: rgba(113, 113, 113, 0.386);
+  /* width: 140px; */
+  /* height: 140px; */
+  /* border-radius: 100px; */
+  opacity: 0;
+  animation: fadeIn 0.75s linear forwards;
+  animation-delay: 1s;
+  border: 0.6rem solid #cf9009;
+  padding: 5rem 0;
+}
+
+.circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stroke 2s ease-out forwards;
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
