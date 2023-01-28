@@ -16,7 +16,7 @@ function EventCounter({ event }) {
                     <CountUp start={event.start} end={event.end} duration={5}>
                         {({ countUpRef }) => (
                             <div>
-                                <span ref={countUpRef} />
+                                <span ref={countUpRef} style={{fontSize: '1.5rem'}} />
                             </div>
                         )}
                     </CountUp>

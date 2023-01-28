@@ -1,17 +1,20 @@
 .hOQiSy {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .hCJOJS {
-    line-height: 0 !important;
-    background: #b5890f !important;
-    border-radius: 10% !important;
+  line-height: 0 !important;
+  background: rgba(181, 137, 15, 0.88) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  border-radius: 10% !important;
 }
 
 svg {
-color: #fff !important;
+  color: #fff !important;
 }
 
 .epKbGN {
-    top: 70% !important;
+  top: 70% !important;
 }

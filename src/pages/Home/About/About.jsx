@@ -1,6 +1,11 @@
 import './about.css';
 import logo2 from '../../../assets/img/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCirclePlay, faCirclePause } from '@fortawesome/free-regular-svg-icons';
+
+library.add(faCirclePlay, faCirclePause)
+
 
 function About() {
     return(
@@ -23,12 +28,14 @@ function About() {
                             and its administrative functioning and reporting.</p>
                         <div id="audio">
                             <h4>Listen To Our Theme Song</h4>
-                            <FontAwesomeIcon icon="fa-regular fa-circle-play" />
+                            {/* <i class="fa-regular fa-circle-play"></i> */}
+                            <a href='/'><FontAwesomeIcon icon={faCirclePlay} className="playIcon"/></a>
+                            <a href='/'><FontAwesomeIcon icon={faCirclePause} className="pauseIcon"/></a>
                             {/* <a href='/' onClick="playAudio()" type="button"><i className="icofont-play-alt-1"></i></a> */}
                             {/* <a href='/' onClick="pauseAudio()" type="button"><i className="icofont-pause"></i></a> */}
-                            <audio id="myAudio">
+                            {/* <audio id="myAudio">
                                 <source src="./img/anthem.mpeg" type="audio/ogg"/>
-                            </audio>
+                            </audio> */}
                         </div>
 
                     </div>

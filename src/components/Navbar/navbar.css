@@ -73,7 +73,10 @@ a {
 .menu li a:hover{
   border-left: 3px solid #c8a31c;
   border-bottom: 4px solid #c8a31c;
-  background: #cf9009;
+  background: rgba(207, 144, 9, 0.63);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
 }
 
 .scrolled {
