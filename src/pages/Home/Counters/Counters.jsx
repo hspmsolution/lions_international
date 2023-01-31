@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function EventCounter({ event }) {
     return (
-        <div className='col-md-3 col-6 count-border'>
+        <div className='col-md-3 col-6 count'>
             {/* <svg height="200" width="200"><circle class="circle" cx="100" cy="100" r="95" stroke="tranparent" stroke-width="10" fill-opacity="0" /></svg> */}
             <div className="">
                 <div>
@@ -29,10 +29,11 @@ function EventCounter({ event }) {
 
 
 const events = [
-    { name: "Activities", start: 100, end: 9590, icon:<FontAwesomeIcon icon="fa-solid fa-users" /> },
+    { name: "Total Activities", start: 100, end: 9590, icon:<FontAwesomeIcon icon="fa-solid fa-users" /> },
     { name: "Amount Spent", start: 100000, end: 96783787 },
-    { name: "Clubs", start: 10, end: 128 },
-    { name: "People Served", start: 10000, end: 4210402 },
+    { name: "Amount Spent", start: 100000, end: 96783787 },
+    { name: "Total Clubs", start: 10, end: 128 },
+    { name: "Beneficiaries Served", start: 10000, end: 4210402 },
 ]
 
 function Counters() {
@@ -55,8 +56,8 @@ function Counters() {
 
     return (
         <div className="counters">
-            <div className='container col-lg-12'>
-                <div ref={countersRef} className='row text-center'>
+            <div className='col-lg-12 ' style={{width: '95%'}}>
+                <div ref={countersRef} className='row text-center d-flex ' style={{justifyContent: 'space-evenly'}}>
                     {events.map(event => (  
                         <EventCounter key={event.name} event={event} />
                     ))}
