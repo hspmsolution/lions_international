@@ -12,15 +12,6 @@ function Slider() {
       <Slide>
         <img alt="img1" src={saibaba_baner_3_center} />
       </Slide>
-      <Slide>
-        <img alt="img2" src={lions_international_baner_1_resize} />
-      </Slide>
-      <Slide>
-        <img alt="img3" src={godavari_baner_4_center} />
-      </Slide>
-      <Slide>
-        <img alt="img4" src={shaniwarwada_baner_2_center} />
-      </Slide>
     </ImageSlider>
   );
 }

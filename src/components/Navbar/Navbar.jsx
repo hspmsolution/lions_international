@@ -7,40 +7,36 @@ import PopupMenu from './PopupMenu';
 import "./navbar.css";
 
 function Navbar() {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
-  useEffect(() => {
-    function handleScroll() {
-      setScrollPosition(window.pageYOffset);
-      if (scrollPosition > 650) {
-        return 'scrolled';
-      }
-        return '';
-    }
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     setScrollPosition(window.pageYOffset);
+  //     if (scrollPosition > 650) {
+  //       return 'scrolled';
+  //     }
+  //       return '';
+  //   }
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollPosition]);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [scrollPosition]);
 
   return (
     <>
-      <div className='head-dist-h'>
-        <a href="/"><img src={logo2} alt="Lions Club" /></a>
-        <div><h3 className='head-lions-i'>LIONS INTERNATIONAL</h3>
-        <h3 className='head-dist-num'>DISTRICT 3234-D2</h3></div>
-      </div>
-      {scrollPosition > 650 ? (
+      {/* {scrollPosition > 650 ? ( */}
         <div id="header">
           <div className='container-flex d-flex align-items-center'>
             <a href="/" className="logo"><img src={logo} className="img-logo" alt="Lions Club" /></a>
             <a href="/" id="logo2" className="logo" style={{marginRight: 'auto'}}><img src={logo2} className="img-logo" alt="Lions Club" /></a>
             <input type="checkbox" id="chk" />
             <label htmlFor="chk" className="show-menu-btn">
-              <i className="fas fa-bars"> <FontAwesomeIcon icon={faBars} /> </i>
+              <i className="fas fa-bars"><FontAwesomeIcon icon={faBars} /></i>
             </label>
+            <nav>
               <ul className="menu">
                 <a href="/">Home</a>
                 <a><PopupMenu name="About" menuItems={["Governer", "DG Team", "About District 3234D2", "Organization Chart"]} /></a>
@@ -54,9 +50,10 @@ function Navbar() {
                   <i className="fas fa-times"><FontAwesomeIcon icon={faTimes} /></i>
                 </label>
               </ul>
+            </nav>
           </div>
         </div>
-      ) : null}
+      {/* ) : null} */}
     </>
   );
 };

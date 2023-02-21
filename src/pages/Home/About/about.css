@@ -11,8 +11,9 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,46,87,1) 98%);
 
 .about-card {
     padding: 1rem;
-    background-color: rgba(222, 213, 213, 0.589);
+    background-color: rgba(222, 213, 213, 0.227);
     border-radius: 3rem;
+    box-shadow: 0 4px 20px #00000089;
     color: #fff;
     position: relative;
     width: 100%;
