@@ -2,13 +2,16 @@ import React from "react";
 import Navbar from '../../components/Navbar/Navbar'
 import governer from '../../assets/img/logo.png'
 import Footer from '../../components/Footer/Footer'
+import './about.css'
 
 const About = () => {
     return (
-        <>
+        <div className="aboutGov">
             <Navbar />
             <div className="dist-governer d-flex">
-                <img src={governer} alt="our district governer" />
+                <div>
+                    <img src={governer} alt="our district governer" />
+                </div>
                 <p>
                     <br /><br />
                     <b>  Dear Members and Sevayatris,<br />
@@ -52,21 +55,8 @@ const About = () => {
 
                 </p>
             </div>
-        </>
+        </div>
     )
 }
 
 export default About;
-
-
-/*
-
-const useStyles = makeStyles((theme) => ({
-    gridItemWrapper: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-}));
-
-*/

@@ -11,9 +11,29 @@ import Footer from "../../components/Footer/Footer.jsx";
 
 function Home() {
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrollPosition(window.pageYOffset);
+      if (scrollPosition > 650) {
+        return 'scrolled';
+      }
+      return '';
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
 
   return (
     <div className="App">
+      {scrollPosition > 650 ? (
+        <Navbar />
+      ) : null}
       <Header />
       <Slider />
       <About />
